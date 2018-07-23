@@ -1,12 +1,14 @@
 version: "2"
 services:
   nginx:
-      build:
-          context: ./nginx
-      ports:
-          - "8080:80"
-      volumes_from:
-        - fpm
+    build:
+      context: ./nginx
+    ports:
+    - "8080:80"
+    volumes:
+    - /tmp/xcellerate:/mnt
+    links:
+    - fpm
   fpm:
       build:
           context: ./fpm

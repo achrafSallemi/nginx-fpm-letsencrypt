@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e -u
+
+DOMAIN=$1
+#STAGING=--staging
+
+service nginx start
+certbot ${STAGING:-} \
+    --non-interactive \
+    --nginx \
+    --config-dir /mnt \
+    --keep-until-expiring \
+    --agree-tos \
+    --register-unsafely-without-email \
+    --redirect \
+    -d $DOMAIN
+service nginx stop
+
+nginx -g 'daemon off;'
