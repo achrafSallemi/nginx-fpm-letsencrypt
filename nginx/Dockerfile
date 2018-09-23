@@ -4,7 +4,7 @@ RUN   echo deb http://ftp.debian.org/debian stretch-backports main >> /etc/apt/s
   &&  apt-get update -qq \
   &&  apt-get install -y python-certbot-nginx -t stretch-backports
 
-ENV   DOMAIN informative-widget.xcellerate.plista.se
+ENV   DOMAIN YOUR_DOMAINE
 
 COPY  default.conf /etc/nginx/conf.d/default.conf
 COPY  index.html /var/www/
