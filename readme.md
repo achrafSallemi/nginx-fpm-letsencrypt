@@ -1,6 +1,6 @@
 # Docker-Php7-SSL-Nginx
 
-A quick and easy way to setup your PHP application with ssl certificate using Docker. This will setup a developement environment with PHP7-fpm and Nginx.
+A quick and easy way to setup your PHP application with SSL certificate using Docker. This will setup a developement environment with PHP7-fpm, SSL and Nginx.
 
 ## Usage
 ~~~
